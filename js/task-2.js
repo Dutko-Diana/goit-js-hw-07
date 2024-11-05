@@ -24,3 +24,17 @@ const images = [
     alt: "Lighthouse Coast Sea",
   }
 ];
+
+const list = document.querySelector('.gallery');
+
+let imageSrc = [];
+let imageAlt = [];
+
+images.forEach(image => {
+  imageSrc.push(image.url);
+  imageAlt.push(image.alt);
+})
+
+const markup = `<li class="gallery-item"><img src="${imageSrc[0]}"></li><li class="gallery-item"><img src="${imageSrc[1]}"></li><li class="gallery-item"><img src="${imageSrc[2]}"></li><li class="gallery-item"><img src="${imageSrc[3]}"></li><li class="gallery-item"><img src="${imageSrc[4]}"></li><li class="gallery-item"><img src="${imageSrc[5]}"></li>`
+
+list.insertAdjacentHTML('afterbegin', markup);

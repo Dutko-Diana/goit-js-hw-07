@@ -67,3 +67,27 @@ ul {
       letter-spacing: 0.04em;
       color: #2e2f42;
 }
+
+
+/* task 2 */
+
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 24px
+}
+
+.gallery-item {
+  width: calc((100% - 24px) / 2);
+  height: 460px;
+  overflow: hidden;
+  border-radius: 23px;
+}
+
+img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
