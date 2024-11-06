@@ -81,11 +81,11 @@ ul {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  gap: 24px
+  gap: 10px;
 }
 
 .gallery-item {
-  width: calc((100% - 24px) / 2);
+  width: calc((100% - 10px) / 3);
   height: 460px;
   overflow: hidden;
   border-radius: 23px;

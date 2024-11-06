@@ -27,14 +27,17 @@ const images = [
 
 const list = document.querySelector('.gallery');
 
-let imageSrc = [];
-let imageAlt = [];
+const gallery = images.map((image) => {
+  const item = document.createElement('li');
+  item.classList.add('gallery-item');
+  const img = document.createElement('img');
+  img.src = image.url;
+  img.alt = image.alt;
 
-images.forEach(image => {
-  imageSrc.push(image.url);
-  imageAlt.push(image.alt);
+  item.append(img);
+
+  return item;
 })
+  
+list.append(...gallery);
 
-const markup = `<li class="gallery-item"><img src="${imageSrc[0]}"></li><li class="gallery-item"><img src="${imageSrc[1]}"></li><li class="gallery-item"><img src="${imageSrc[2]}"></li><li class="gallery-item"><img src="${imageSrc[3]}"></li><li class="gallery-item"><img src="${imageSrc[4]}"></li><li class="gallery-item"><img src="${imageSrc[5]}"></li>`
-
-list.insertAdjacentHTML('afterbegin', markup);
